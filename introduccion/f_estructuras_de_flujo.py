@@ -100,6 +100,8 @@ Escribe un programa que recorra una cadena de texto ingresada por el usuario y c
 Pide al usuario un número entero y usa un bucle for para imprimir la tabla de multiplicar de ese número del 1 al 10.
 """
 
+
+# Imprimir número pares
 num = 3
 residuo = num % 2  # si es par el residuo es 0, si es impar el residuo es 1
 print(residuo)
@@ -125,11 +127,21 @@ if 1 in numeros:
 # Texto ingresado por el usuario
 # Conteo de vocales
 cadena = input("Ingrese una palabra: ")
-conteo = 0
-vocales = ["a", "e", "i", "o", "u"]
+conteo: int = 0
+vocales: list[str] = ["a", "e", "i", "o", "u"]
 
-for letra in cadena:
-    if letra in vocales:
+# cadena = "hello"
+for char in cadena:
+    if char in vocales:
         conteo += 1
 
-print("Total de vocales",conteo )
+print("Total de vocales: ", conteo)
+
+
+# Tabla de multiplicar
+texto: str = input("Ingresa un número del 1 al 10: ")
+tabla=int(texto)
+
+for i in range(1,11):
+    num=i*tabla
+    print(f'{tabla} * {i} = {num}')
